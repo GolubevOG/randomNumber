@@ -1,0 +1,67 @@
+/* Сброс стилей по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    height: 100vh; /* Занимает всю высоту экрана */
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* Градиентный фон */
+    text-align: center; /* Центрирование текста */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333; /* Темный цвет текста */
+    font-size: 5vw; /* Размер заголовка зависит от ширины экрана */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для контейнера */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    padding: 20px;
+    width: 90%; /* Ширина контейнера */
+    max-width: 600px; /* Максимальная ширина */
+    flex: 1; /* Занимает оставшееся пространство */
+    display: flex; /* Используем Flexbox для вертикального выравнивания */
+    flex-direction: column; /* Вертикальное расположение элементов внутри контейнера */
+    justify-content: center; /* Центрирование по вертикали внутри контейнера */
+}
+
+.inputField {
+    width: 100%; /* Полная ширина поля ввода */
+    padding: 5vw; /* Увеличенные отступы внутри поля, зависят от ширины экрана */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    border: 2px solid #ccc; /* Светлая рамка */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 4vw; /* Увеличенный размер шрифта, зависит от ширины экрана */
+}
+
+#randomNumber {
+    font-size: 8vw; /* Увеличенный размер шрифта для случайного числа, зависит от ширины экрана */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    color: #007BFF; /* Цвет текста */
+}
+
+button {
+    background-color: #007BFF; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без рамки */
+    border-radius: 4px; /* Закругленные углы */
+    padding: 5vw; /* Увеличенные отступы внутри кнопки, зависят от ширины экрана */
+    font-size: 3vw; /* Увеличенный размер шрифта, зависит от ширины экрана */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+    width: 100%; /* Полная ширина кнопки */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}
