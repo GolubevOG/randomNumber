@@ -1,67 +1,92 @@
-/* Сброс стилей по умолчанию */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #4a90e2, #50e3c2);
     display: flex;
     flex-direction: column; /* Вертикальное расположение элементов */
-    justify-content: center; /* Центрирование по вертикали */
-    align-items: center; /* Центрирование по горизонтали */
-    height: 100vh; /* Занимает всю высоту экрана */
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* Градиентный фон */
-    text-align: center; /* Центрирование текста */
-}
-
-h1 {
+    justify-content: flex-start; /* Начинаем с верхней части */
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem; /* Начальный размер для мобильных устройств */
     margin-bottom: 20px;
-    color: #333; /* Темный цвет текста */
-    font-size: 5vw; /* Размер заголовка зависит от ширины экрана */
-}
-
-.container {
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для контейнера */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
-    padding: 20px;
-    width: 90%; /* Ширина контейнера */
-    max-width: 600px; /* Максимальная ширина */
-    flex: 1; /* Занимает оставшееся пространство */
-    display: flex; /* Используем Flexbox для вертикального выравнивания */
-    flex-direction: column; /* Вертикальное расположение элементов внутри контейнера */
-    justify-content: center; /* Центрирование по вертикали внутри контейнера */
-}
-
-.inputField {
-    width: 100%; /* Полная ширина поля ввода */
-    padding: 5vw; /* Увеличенные отступы внутри поля, зависят от ширины экрана */
-    margin: 10px 0; /* Отступы сверху и снизу */
-    border: 2px solid #ccc; /* Светлая рамка */
-    border-radius: 4px; /* Закругленные углы */
-    font-size: 4vw; /* Увеличенный размер шрифта, зависит от ширины экрана */
-}
-
-#randomNumber {
-    font-size: 8vw; /* Увеличенный размер шрифта для случайного числа, зависит от ширины экрана */
-    margin: 20px 0; /* Отступы сверху и снизу */
-    color: #007BFF; /* Цвет текста */
-}
-
-button {
-    background-color: #007BFF; /* Цвет фона кнопки */
-    color: white; /* Цвет текста кнопки */
-    border: none; /* Без рамки */
-    border-radius: 4px; /* Закругленные углы */
-    padding: 5vw; /* Увеличенные отступы внутри кнопки, зависят от ширины экрана */
-    font-size: 3vw; /* Увеличенный размер шрифта, зависит от ширины экрана */
-    cursor: pointer; /* Указатель при наведении */
-    transition: background-color 0.3s; /* Плавный переход цвета */
-    width: 100%; /* Полная ширина кнопки */
-}
-
-button:hover {
-    background-color: #0056b3; /* Цвет фона кнопки при наведении */
-}
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inputField {
+    width: 80%;
+    max-width: 300px; /* Ограничение ширины для мобильных устройств */
+    font-size: 2rem; /* Увеличенный размер шрифта для полей ввода */
+    padding: 15px; /* Увеличенный внутренний отступ */
+    margin: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center; /* Выравнивание текста по центру */
+  }
+  
+  #randomNumber {
+    font-size: 4rem; /* Увеличенный размер для отображаемого числа */
+    margin: 20px 0;
+    color: white;
+  }
+  
+  button {
+    font-size: 2rem; /* Увеличенный размер шрифта для кнопки */
+    padding: 15px 30px; /* Увеличенный внутренний отступ для кнопки */
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4a90e2;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  h6 {
+    font-size: 1rem; /* Начальный размер для мобильных устройств */
+    color: white;
+    margin-top: 20px;
+  }
+  
+  /* Медиа-запросы для больших экранов */
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 3rem; /* Увеличиваем размер заголовка */
+    }
+  
+    .inputField {
+      font-size: 2.5rem; /* Увеличиваем размер шрифта для полей ввода */
+      max-width: 400px; /* Увеличиваем максимальную ширину */
+    }
+  
+    #randomNumber {
+      font-size: 5rem; /* Увеличиваем размер отображаемого числа */
+    }
+  
+    button {
+      font-size: 2.5rem; /* Увеличиваем размер кнопки */
+    }
+  
+    h6 {
+      font-size: 1.5rem; /* Увеличиваем размер подписи */
+    }
+  }
+  
